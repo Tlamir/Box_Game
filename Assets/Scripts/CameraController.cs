@@ -5,10 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
-    Animation cameraAnim;
 
     private Vector3 offset;
-    private bool isAnimationPlayed = false;
 
     // Start is called before the first frame update
     void Start()
