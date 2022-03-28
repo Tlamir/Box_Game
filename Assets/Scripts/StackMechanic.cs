@@ -9,7 +9,6 @@ public class StackMechanic : MonoBehaviour
     [SerializeField]
     private Transform parent;
     public Vector3 boxPosition;
-    private int totalBoxCollected=-1;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +20,7 @@ public class StackMechanic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+      
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +28,7 @@ public class StackMechanic : MonoBehaviour
         
         if (other.gameObject.tag == "Box")
         {
-            totalBoxCollected++;
+            TotalBoxCollected.instance.Value++;
             Stack(other.gameObject);
             Debug.Log("collision");
         }
@@ -39,7 +38,7 @@ public class StackMechanic : MonoBehaviour
     {
         boxPosition = parent.position;
         stackedObject.transform.parent = parent;
-        boxPosition.y += distanceBetweenObjects*totalBoxCollected;
+        boxPosition.y += distanceBetweenObjects* TotalBoxCollected.instance.Value;
         stackedObject.transform.position= boxPosition;
         
     }

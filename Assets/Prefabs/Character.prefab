@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2140642653
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140642654}
+  m_Layer: 0
+  m_Name: BoxHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2140642654
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140642653}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.4, z: -0.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1037824448096793919}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3624179903062767168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,9 +1691,11 @@ GameObject:
   - component: {fileID: 3624179903062993886}
   - component: {fileID: 3624179903072240676}
   - component: {fileID: 715419967420580488}
+  - component: {fileID: 4298125922230961376}
+  - component: {fileID: 4298125922230961379}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1720,6 +1752,34 @@ MonoBehaviour:
   SwipeSpeed: 2
   swerveSpeed: 0.4
   maxSwerveAmount: 1
+--- !u!65 &4298125922230961376
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624179903062767614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.0869565, z: 3.0922463}
+  m_Center: {x: 0, y: 0.836371, z: 1.0461231}
+--- !u!114 &4298125922230961379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3624179903062767614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d436cd43054b5db42a839b8cf023ab58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceBetweenObjects: 0.6
+  parent: {fileID: 2140642654}
+  boxPosition: {x: 0, y: 0, z: 0}
 --- !u!1001 &3349571444332249624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1775,7 +1835,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: pallet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3121229843757362589, guid: 64e0a3889860b4e4f951a99679683880, type: 3}
+      propertyPath: m_TagString
+      value: pallet
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2851270939477504830, guid: 64e0a3889860b4e4f951a99679683880, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 64e0a3889860b4e4f951a99679683880, type: 3}
 --- !u!4 &1037824448096793919 stripped
 Transform:
