@@ -8,8 +8,12 @@ public class BoxShatter : MonoBehaviour
     {
         GetComponent<Rigidbody>().AddExplosionForce(500, transform.position, 5);
     }
-    void OnBecameInvisible()
+    void Update()
     {
-        Destroy(gameObject);
+        if (transform.position.y<-3)
+        {
+            Destroy(gameObject);
+        }   
     }
+    
 }

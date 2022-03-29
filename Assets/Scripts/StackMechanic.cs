@@ -30,6 +30,11 @@ public class StackMechanic : MonoBehaviour
         {
             TotalBoxCollected.instance.Value++;
             Stack(other.gameObject);
+            //other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+
+            //other.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            other.gameObject.GetComponent<HingeJoint>().connectedBody = gameObject.GetComponent<Rigidbody>();
+           
             Debug.Log("collision");
         }
     }
