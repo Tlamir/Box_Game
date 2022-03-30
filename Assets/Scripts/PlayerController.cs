@@ -18,10 +18,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float maxSwerveAmount = 1f;
 
+    private bool isGameStarted=false;
+
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,19 +36,25 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 translate1 = (new Vector3(0, 0, 1) * Time.deltaTime) * Speed;
-        transform.Translate(translate1);
+        if (isGameStarted)
+        {
+            //Move stright after start
+            Vector3 translate = (new Vector3(0, 0, 1) * Time.deltaTime) * Speed;
+            transform.Translate(translate);
+        }
 
 
         if (Input.GetMouseButtonDown(0))
         {
-
+            
             _lastFrameFingerPositionX = Input.mousePosition.x;
             //Play Animation Here
 
         }
         else if (Input.GetMouseButton(0))
         {
+            isGameStarted = true;
+            animator.SetBool("Run", true);
             _moveFactorX = Input.mousePosition.x - _lastFrameFingerPositionX;
             _lastFrameFingerPositionX = Input.mousePosition.x;
             MovePlayer();
