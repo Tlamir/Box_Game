@@ -8,7 +8,7 @@ public class StackMechanic : MonoBehaviour
     private float distanceBetweenObjects=1.0f;
     [SerializeField]
     private Transform parent;
-    public GameObject prevBox;
+    private GameObject prevBox;
     public Vector3 boxPosition;
     // Start is called before the first frame update
     void Start()
@@ -40,6 +40,7 @@ public class StackMechanic : MonoBehaviour
     {
         if (TotalBoxCollected.instance.Value==0)
         {
+            //Fix code repeat later
             prevBox = stackedObject;
             boxPosition = parent.position;
             stackedObject.transform.parent = parent;

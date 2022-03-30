@@ -703,6 +703,10 @@ PrefabInstance:
       value: BoxHolder
       objectReference: {fileID: 0}
     - target: {fileID: 7310249662728100815, guid: 7eeff08097637a64f8866d339d2d514e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7310249662728100815, guid: 7eeff08097637a64f8866d339d2d514e, type: 3}
       propertyPath: m_TagString
       value: Boxholder
       objectReference: {fileID: 0}
@@ -1741,6 +1745,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 372892199634218885, guid: 1365d902b784ee842a5e9eabc2087a8c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3624179903062767614, guid: 1365d902b784ee842a5e9eabc2087a8c, type: 3}
       propertyPath: m_Name
       value: Character
@@ -1787,6 +1795,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3624179903062993886, guid: 1365d902b784ee842a5e9eabc2087a8c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624179903072240676, guid: 1365d902b784ee842a5e9eabc2087a8c, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624179903072240676, guid: 1365d902b784ee842a5e9eabc2087a8c, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4298125922230961379, guid: 1365d902b784ee842a5e9eabc2087a8c, type: 3}
